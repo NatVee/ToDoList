@@ -46,6 +46,7 @@ function deleteTask(event){
         parentNode.remove()
         checkEmptyList()
         saveToLocalStorage()
+        
     }  
 }
 
@@ -58,6 +59,7 @@ function doneTask(event){
         const taskTitle = parentNode.querySelector('.task-title')
         taskTitle.classList.add('task-title--done')
         saveToLocalStorage()
+        event.target.style.display = 'none'
     }
 }
 
