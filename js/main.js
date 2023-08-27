@@ -85,9 +85,9 @@ function renderTask(task){
     <li id="${task.id}" class="list-group-item d-flex justify-content-between task-item">
         <span class="${cssClass}">${task.text}</span>
         <div class="task-item__buttons">
-            <button type="button" data-action="done" class="btn-action">
+            ${task.done ? '' : `<button type="button" data-action="done" class="btn-action">
                 <img src="./img/tick.svg" alt="Done" width="18" height="18">
-            </button>
+            </button>`}
             <button type="button" data-action="delete" class="btn-action">
                 <img src="./img/cross.svg" alt="Done" width="18" height="18">
             </button>
